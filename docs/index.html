@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Store</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MoCart</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="style.css"> <!-- Your custom styles if needed -->
 </head>
 <body>
-    <header>
-        <h1>E-commerce Store</h1>
-        <nav>
-            <a href="#products">Products</a>
-            <a href="cart.html">Cart</a>
-        </nav>
+    <header class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">MoCart</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Close">X</button>
+            </div>
+        </div>
     </header>
     
-    <section id="products">
-        <h2>Our Products</h2>
-        <div id="product-list"></div>
+    <section id="products" class="window">
+        <h2 class="title-bar-text">Our Products</h2>
+        <div id="product-list" class="window-content"></div>
     </section>
 
     <script src="script.js"></script>

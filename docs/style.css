@@ -1,0 +1,40 @@
+body {
+    background-color: #c0c0c0; /* Windows 98 gray background */
+    font-family: 'Tahoma', sans-serif;
+}
+
+#products {
+    padding: 20px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of cards to next line */
+    justify-content: center; /* Center the cards in the container */
+}
+
+.product-card {
+    margin: 10px;
+    width: 200px; /* Set a fixed width for the cards */
+    border: 2px solid #000; /* Adding borders around products */
+}
+
+.card {
+    padding: 10px; /* Inner padding for the card */
+}
+
+.product-card img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    border-bottom: 2px solid #000; /* Border below the image */
+}
+
+.card-content {
+    padding: 5px 0; /* Padding for content inside the card */
+}
+
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 10px; /* Space above the button */
+}
+
