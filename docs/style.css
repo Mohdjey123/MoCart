@@ -1,5 +1,6 @@
 body {
     margin-bottom: 50px;
+    font-family: var(--font-family, "MS Sans Serif"), sans-serif;
 }
 #products {
     padding: 20px;
@@ -46,26 +47,18 @@ button {
     font-size: 14px;
 }
 
-
-
-
-
-
-
-
 /* Taskbar styles */
 .taskbar {
     display: flex;
     align-items: center;
-    background-color: #c0c0c0; /* Light gray color */
+    background-color: #c0c0c0; 
     height: 40px;
     padding: 0 10px;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 2px solid #808080; /* Darker gray */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #808080; 
 }
 
 .start-menu {
@@ -73,44 +66,68 @@ button {
 }
 
 #start-button {
-    background-color: #d3d3d3; /* Light gray */
+    background-color: #d3d3d3; 
     border: 1px solid #808080;
-    padding: 5px 10px;
+    padding: 10px ;
     cursor: pointer;
 }
 
+/* Start Menu Content */
 .start-menu-content {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
-    bottom: 40px; /* Position above the taskbar */
+    bottom: 40px;
     left: 0;
+    width: 200px;
     background-color: #c0c0c0;
-    border: 1px solid #808080;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid #808080;
+    box-shadow: 3px 3px 0 #000000, inset 1px 1px 0 white;
     z-index: 1000;
 }
 
+/* Start Menu List */
 .start-menu-content ul {
     list-style: none;
-    padding: 5px 0;
+    padding: 0;
     margin: 0;
 }
+
 
 .start-menu-content li {
     padding: 5px 10px;
 }
 
+
+/* Start Menu Hover */
 .start-menu-content li:hover {
-    background-color: #a0a0a0; /* Darker gray on hover */
+    background-color: #000080;
 }
 
+/* Icons in Start Menu */
+.start-menu-content li img {
+    margin-right: 10px;
+    height: 16px;
+    width: 16px;
+}
+
+/* Taskbar Items */
 .taskbar-items {
-    margin-left: 20px; /* Space between start menu and taskbar items */
+    margin-left: 20px;
     color: black;
 }
 
-/* Show start menu on button click */
+.start-menu-content a {
+    font-family: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+.start-menu-content a:hover {
+    background-color: #000080;
+}
+/* Show Menu */
 .show {
-    display: block; /* Show when toggled */
+    display: block;
 }
 
