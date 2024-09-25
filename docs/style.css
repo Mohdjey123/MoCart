@@ -17,6 +17,9 @@ body {
 
 .product-card {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 200px; 
     border: 2px solid #000; 
 }
@@ -37,5 +40,31 @@ body {
 
 .button-container {
     text-align: center;
-    margin-top: 10px;
+    margin-top: auto;
 }
+
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#window {
+    position: absolute;
+    left: 20px; 
+    top: 40px; 
+    width: 200px;
+}
+
+.title-bar-text {
+    margin-left: 250px; /* Move the text 60px to the right */
+}
+
+
+
