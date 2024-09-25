@@ -1,3 +1,6 @@
+body {
+    margin-bottom: 50px;
+}
 /* Cart styles */
 #cart {
     padding: 20px;
@@ -6,14 +9,14 @@
 #cart-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 /* Style for the cart items */
 .cart-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #000;
@@ -49,18 +52,63 @@
     font-size: 14px;
 }
 
-#checkout-button:hover, #continue-shopping-button:hover {
-    background-color: #000;
-    color: #fff;
+/* Taskbar styles */
+.taskbar {
+    display: flex;
+    align-items: center;
+    background-color: #c0c0c0; /* Light gray color */
+    height: 40px;
+    padding: 0 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #808080; /* Darker gray */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
 }
 
-#window {
+.start-menu {
+    position: relative;
+}
+
+#start-button {
+    background-color: #d3d3d3; /* Light gray */
+    border: 1px solid #808080;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.start-menu-content {
+    display: none; /* Hidden by default */
     position: absolute;
-    left: 20px; 
-    top: 40px; 
-    width: 200px;
+    bottom: 40px; /* Position above the taskbar */
+    left: 0;
+    background-color: #c0c0c0;
+    border: 1px solid #808080;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-.title-bar-text {
-    margin-left: 250px;
+.start-menu-content ul {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.start-menu-content li {
+    padding: 5px 10px;
+}
+
+.start-menu-content li:hover {
+    background-color: #a0a0a0; /* Darker gray on hover */
+}
+
+.taskbar-items {
+    margin-left: 20px; /* Space between start menu and taskbar items */
+    color: black;
+}
+
+/* Show start menu on button click */
+.show {
+    display: block; /* Show when toggled */
 }

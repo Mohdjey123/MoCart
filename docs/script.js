@@ -125,6 +125,20 @@ if (continueShoppingButton) {
 }
 
 
+document.getElementById('start-button').addEventListener('click', function() {
+    const menu = document.querySelector('.start-menu-content');
+    menu.classList.toggle('show'); // Toggle visibility
+});
+
+// Close the start menu if clicking outside of it
+document.addEventListener('click', function(event) {
+    const menu = document.querySelector('.start-menu-content');
+    if (!menu.contains(event.target) && event.target.id !== 'start-button') {
+        menu.classList.remove('show');
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     loadProducts();
 });

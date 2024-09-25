@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoCart - Cart</title>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
-    <link rel="stylesheet" href="cart.css"> <!-- Your custom styles if needed -->
+    <link rel="stylesheet" href="cart.css"> 
 </head>
 
 <body>
-    
     <header class="window">
         <div class="title-bar">
             <div class="title-bar-text">MoCart - Shopping Cart</div>
@@ -22,32 +20,23 @@
         </div>
     </header>
     
-    <!-- Menu section with tree view -->
-    <section class="window" id="window">
-        <ul class="tree-view">
-            <li>
-                <span class="caret">Home</span>
-            </li>
-            <li>
-                <span class="caret">Products</span>
-                <ul class="nested">
-                    <li><a href="index.html">View All Products</a></li>
+    <!-- Windows 98 Taskbar -->
+    <div class="taskbar">
+        <div class="start-menu">
+            <button id="start-button">Start</button>
+            <div class="start-menu-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </li>
-            <li>
-                <span class="caret">Cart</span>
-                <ul class="nested">
-                    <li><a href="cart.html">View Cart</a></li>
-                </ul>
-            </li>
-            <li>
-                <span class="caret">Contact</span>
-                <ul class="nested">
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+            </div>
+        </div>
+        <div class="taskbar-items">
+            <span>MoCart</span>
+        </div>
+    </div>
 
     <section class="window" id="cart">
         <h2 class="title-bar-text">Your Cart</h2>
@@ -68,6 +57,7 @@
     </section>    
 
     <script src="script.js"></script>
+    
 </body>
 
 </html>
