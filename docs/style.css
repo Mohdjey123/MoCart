@@ -1,6 +1,8 @@
 body {
-    background-color: #c0c0c0; /* Windows 98 gray background */
+    background-color: #c0c0c0; 
     font-family: 'Tahoma', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 #products {
@@ -9,32 +11,31 @@ body {
 
 #product-list {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping of cards to next line */
-    justify-content: center; /* Center the cards in the container */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .product-card {
     margin: 10px;
-    width: 200px; /* Set a fixed width for the cards */
-    border: 2px solid #000; /* Adding borders around products */
+    width: 200px; 
+    border: 2px solid #000; 
 }
 
 .card {
-    padding: 10px; /* Inner padding for the card */
+    padding: 10px; 
 }
 
 .product-card img {
-    max-width: 100%; /* Responsive image */
+    max-width: 100%;
     height: auto;
-    border-bottom: 2px solid #000; /* Border below the image */
+    border-bottom: 2px solid #000; 
 }
 
 .card-content {
-    padding: 5px 0; /* Padding for content inside the card */
+    padding: 5px 0; 
 }
 
 .button-container {
-    text-align: center; /* Center the button */
-    margin-top: 10px; /* Space above the button */
+    text-align: center;
+    margin-top: 10px;
 }
-
