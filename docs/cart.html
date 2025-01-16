@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoCart - Cart</title>
+    <meta name="description" content="Shopping cart for MoCart - Your Windows 98 style shopping experience">
+    <title>MoCart - Shopping Cart</title>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
-    <link rel="stylesheet" href="cart.css"> 
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
-    <header class="window">
+    <header class="window" role="banner">
         <div class="title-bar">
             <div class="title-bar-text">MoCart - Shopping Cart</div>
             <div class="title-bar-controls">
@@ -20,44 +21,43 @@
         </div>
     </header>
     
-    <!-- Windows 98 Taskbar -->
-    <div class="taskbar">
+    <nav class="taskbar" role="navigation">
         <div class="start-menu">
-            <button id="start-button">Start</button>
-            <div class="start-menu-content">
+            <button id="start-button" aria-expanded="false" aria-controls="start-menu-content">Start</button>
+            <div id="start-menu-content" class="start-menu-content" role="menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Products</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li role="menuitem"><a href="index.html">Home</a></li>
+                    <li role="menuitem"><a href="index.html">Products</a></li>
+                    <li role="menuitem"><a href="cart.html" aria-current="page">Cart</a></li>
+                    <li role="menuitem"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="taskbar-items">
             <span>MoCart</span>
         </div>
-    </div>
+    </nav>
 
-    <section class="window" id="cart">
-        <h2 class="title-bar-text">Your Cart</h2>
-        <div id="cart-list" class="window-content">
-            <ul id="item-list">
-                <!-- Dynamically added items will appear here -->
-            </ul>
-        </div>
-    
-        <div class="total">
-            <strong>Total: <span id="total-price">$0.00</span></strong>
-        </div>
-    
-        <div class="button-container">
-            <button id="checkout-button">Proceed to Checkout</button>
-            <button id="continue-shopping-button">Continue Shopping</button>
-        </div>
-    </section>    
+    <main>
+        <section class="window" id="cart" role="main">
+            <h1 class="title-bar-text">Your Cart</h1>
+            <div id="cart-list" class="window-content">
+                <ul id="item-list" aria-live="polite">
+                    <!-- Dynamically added items will appear here -->
+                </ul>
+            </div>
+        
+            <div class="total" aria-live="polite">
+                <strong>Total: <span id="total-price">$0.00</span></strong>
+            </div>
+        
+            <div class="button-container">
+                <button id="checkout-button" aria-label="Proceed to checkout">Proceed to Checkout</button>
+                <button id="continue-shopping-button" aria-label="Continue shopping">Continue Shopping</button>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-    
 </body>
-
 </html>
