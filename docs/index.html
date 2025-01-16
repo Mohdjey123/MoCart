@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoCart</title>
+    <meta name="description" content="MoCart - Your Windows 98 style shopping experience">
+    <title>MoCart - Products</title>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="window">
+    <header class="window" role="banner">
         <div class="title-bar">
-            <div class="title-bar-text">MoCart</div>
+            <div class="title-bar-text">MoCart - Products</div>
             <div class="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
@@ -21,30 +21,32 @@
         </div>
     </header>
 
-    <!-- Windows 98 Taskbar -->
-    <div class="taskbar">
+    <nav class="taskbar" role="navigation">
         <div class="start-menu">
-            <button id="start-button">Start</button>
-            <div class="start-menu-content">
+            <button id="start-button" aria-expanded="false" aria-controls="start-menu-content">Start</button>
+            <div id="start-menu-content" class="start-menu-content" role="menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Products</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li role="menuitem"><a href="index.html" aria-current="page">Home</a></li>
+                    <li role="menuitem"><a href="index.html">Products</a></li>
+                    <li role="menuitem"><a href="cart.html">Cart</a></li>
+                    <li role="menuitem"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="taskbar-items">
             <span>MoCart</span>
         </div>
-    </div>
+    </nav>
 
-    <section id="products" class="window">
-        <h2 class="title-bar-text">Our Products</h2>
-        <div id="product-list" class="window-content"></div>
-    </section>
+    <main>
+        <section id="products" class="window" role="main">
+            <h1 class="title-bar-text">Our Products</h1>
+            <div id="product-list" class="window-content" aria-live="polite">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
-
 </html>
